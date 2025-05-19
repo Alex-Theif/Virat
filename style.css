@@ -4,243 +4,163 @@
     box-sizing: border-box;
 }
 
+
 .container{
     height: 100vh;
-    width: 100%;
-    background-image: url(IMG_6202.JPG);
+    width: 320;
+    background-image:url(IMG_6202.JPG);
     background-size: cover;
-    background-position: center;
     display: flex;
     justify-content: center;
-    align-items: center;
+    
 }
 
-.headcontainer{
-    text-align: center;
+h3{
+    font-size: 20px;
+    margin-left:85px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+h5{
+    font-size: 18px;
+    margin-left: 30px;
+}
+
+h3,h5{
     color: white;
+    margin-top: 20px;
+    
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    color: white;
+}
+
+span{
+    display: flex;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 15px;
+    margin-top: 1px;
 }
 
 .photo{
     width: 150px;
     height: 150px;
-    margin: 20px auto;
+    margin-top: 20px;
     border-radius: 50%;
-    overflow: hidden;
+    margin-left: 90px;
 }
 
 img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    border-radius: 50%;
 }
 
-.headfirst, h5, .lasthead {
+.lasthead{
     margin-top: 10px;
-}
-
-h3.headfirst {
-    font-size: 24px;
-}
-
-h5 {
-    font-size: 18px;
-}
-
-h1.time {
-    font-size: 36px;
     color: white;
-}
-
-span.txt {
-    font-size: 16px;
-    margin-bottom: 10px;
-    display: block;
-}
-
-.lasthead {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    font-style: bold;
     font-style: italic;
-    font-weight: bold;
-    font-size: 18px;
 }
 
-.btn {
+.btn{
+    width: 300px;
+    height: 40px;
+    border: 1px solid white;
+    border-radius: 5px;
+    font-size: 17px;
+    font-weight: bold;
+    background: #ebe816;
     margin-top: 20px;
-    padding: 10px 30px;
-    border: none;
-    border-radius: 48px 0px;
-    font-size: 18px;
-    font-weight: bold;
-    background-color: #8EDDBE;
-    color: white;
-    cursor: pointer;
-    animation: blink 1s linear infinite;
+    margin-left: 15px;
+    transform: scale(1);
 }
-
+/* .btn:active{
+    transform: scale(0.98);
+} */
+#JoinTelegrambtn{
+    padding: 8px 35px;
+    border-radius: 48px 0px; 
+border: 0px solid #6C8003;
+}
 @keyframes blink {
-    0%, 100% {background-color: #3F06FF;}
-    50% {background-color: #8EDDBE;}
+  0%, 100% {background-color:#3F06FF;}
+  50% {background-color: #8EDDBE;}
 }
-
-/* Responsive for mobile phones */
-@media only screen and (max-width: 576px) {
-    .container {
-        padding: 10px;
-        flex-direction: column;
+#JoinTelegrambtn {
+  background-color: #8EDDBE;
+  color: white;
+  animation: blink 1s linear infinite;
+}
+ @media only screen and (max-width:576px ) and (min-width:0px){
+    .container{
+        
+        background-image:url(IMG_6202.JPG);
         background-size: cover;
-    }
-
-    .photo {
-        width: 100px;
-        height: 100px;
-    }
-
-    h3.headfirst {
-        font-size: 18px;
-    }
-
-    h5 {
-        font-size: 16px;
-    }
-
-    h1.time {
-        font-size: 28px;
-    }
-
-    .lasthead {
-        font-size: 14px;
-    }
-
-    .btn {
-        width: 90%;
-        font-size: 16px;
-        padding: 8px 20px;
-    }
+        font-size: medium;
+        
+    } 
+      
 }
-
-/* Extra small devices (phones, less than 576px) */
-@media only screen and (max-width: 575.98px) {
-    .container {
-        padding: 10px;
-        flex-direction: column;
+@media only screen and (max-width:768px ) and (min-width:576px){
+    .container{
+        
+        background-image:url(IMG_6202.JPG);
         background-size: cover;
+        font-size: small;
+        
+    } 
+      
+}
+@media only screen and (max-width:992px ) and (min-width:768px){
+    .container{
+        
+        background-image:url(IMG_6202.JPG);
+        background-size: cover;        
+    } 
+    h3{
+        font-size: 25px;
     }
-    .photo {
-        width: 100px;
-        height: 100px;
-    }
-    h3.headfirst {
-        font-size: 18px;
-    }
-    h5 {
-        font-size: 16px;
-    }
-    h1.time {
-        font-size: 24px;
-    }
-    .lasthead {
-        font-size: 14px;
-    }
-    .btn {
-        width: 90%;
-        font-size: 16px;
-        padding: 8px 20px;
-    }
+      
+}
+@media only screen and (max-width:1200px ) and (min-width:992px){
+    .container{
+        
+        background-image:url(IMG_6202.JPG);
+        background-size: cover;     
+    } 
+   .headcontainer{
+    width: 100%;
+    height: 100vh;
+   }
+   h3,h5{
+    padding: 0px 330px;
+   }
+   h3{
+    font-size: 30px;
+   }
+   h5{
+    font-size: 23px;
+   }
+   h4{
+    font-size: 25px;
+   }
+   .photo{
+    margin-left: 450px;
+   }
+   .btn{
+    margin-left: 350px;
+    width: 350px;
+    height: 50px;
+    font-size: 25px;
+   }
+      
 }
 
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) and (max-width: 767.98px) {
-    .photo {
-        width: 120px;
-        height: 120px;
-    }
-    h3.headfirst {
-        font-size: 20px;
-    }
-    h5 {
-        font-size: 17px;
-    }
-    h1.time {
-        font-size: 28px;
-    }
-    .lasthead {
-        font-size: 16px;
-    }
-    .btn {
-        width: 80%;
-        font-size: 17px;
-    }
-}
-
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) and (max-width: 991.98px) {
-    .photo {
-        width: 130px;
-        height: 130px;
-    }
-    h3.headfirst {
-        font-size: 24px;
-    }
-    h5 {
-        font-size: 18px;
-    }
-    h1.time {
-        font-size: 32px;
-    }
-    .lasthead {
-        font-size: 18px;
-    }
-    .btn {
-        width: 70%;
-        font-size: 18px;
-    }
-}
-
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) and (max-width: 1199.98px) {
-    .photo {
-        width: 140px;
-        height: 140px;
-    }
-    h3.headfirst {
-        font-size: 28px;
-    }
-    h5 {
-        font-size: 20px;
-    }
-    h1.time {
-        font-size: 36px;
-    }
-    .lasthead {
-        font-size: 20px;
-    }
-    .btn {
-        width: 350px;
-        height: 50px;
-        font-size: 20px;
-    }
-}
-
-/* Extra large devices (1200px and up) */
-@media (min-width: 1200px) {
-    .photo {
-        width: 150px;
-        height: 150px;
-    }
-    h3.headfirst {
-        font-size: 32px;
-    }
-    h5 {
-        font-size: 22px;
-    }
-    h1.time {
-        font-size: 40px;
-    }
-    .lasthead {
-        font-size: 22px;
-    }
-    .btn {
-        width: 380px;
-        height: 55px;
-        font-size: 22px;
-    }
-}
