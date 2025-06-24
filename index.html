@@ -6,7 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 
- <!-- Meta Pixel Code -->
+<!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -16,11 +16,11 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1772577820335126');
+fbq('init', '1037837471223373');
 fbq('track', 'PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1772577820335126&ev=PageView&noscript=1"
+src="https://www.facebook.com/tr?id=1037837471223373&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
 
@@ -45,21 +45,29 @@ src="https://www.facebook.com/tr?id=1772577820335126&ev=PageView&noscript=1"
 
 
      <script>
-  document.getElementById('blinking-button').addEventListener('click', function() {
-    // Generate unique event ID using timestamp + random number
-    var eventID = 'subscribe_' + Date.now() + '_' + Math.floor(Math.random() * 10000);
+    // Prevent duplicate firing using a session flag
+    const pixelEventKey = 'subscribe_event_fired';
 
-    // Track with Meta Pixel and include eventID
-    fbq('track', 'Subscribe', {}, { eventID: eventID });
+    document.getElementById('blinking-button').addEventListener('click', function () {
+        if (!sessionStorage.getItem(pixelEventKey)) {
+            // Generate a unique event ID
+            const eventId = 'subscribe_' + Date.now() + '_' + Math.floor(Math.random() * 100000);
 
-    // Optional: log it for debugging
-    // console.log("Meta Subscribe Event ID:", eventID);
+            // Fire the Meta Pixel event with unique ID
+            fbq('track', 'Subscribe', {}, { eventID: eventId });
 
-    // Delay redirect to give Meta time
-    setTimeout(function() {
-      window.location.href = "https://t.me/+1Z8wEGQwqgozNTFl";
-    }, 200);
-  });
+            // Mark this session as fired
+            sessionStorage.setItem(pixelEventKey, 'true');
+
+            // Redirect after short delay
+            setTimeout(function () {
+                window.location.href = "https://t.me/+uwvOf-ufHUdhNGFl";
+            }, 200);
+        } else {
+            // Already fired, just redirect
+            window.location.href = "https://t.me/+1Z8wEGQwqgozNTFl";
+        }
+    });
 </script>
 </body>
 </html>
